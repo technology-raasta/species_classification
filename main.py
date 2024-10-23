@@ -124,5 +124,10 @@ if __name__ == "__main__":
 
         return {"class": predicted_label, "confidence": float(confidence)}
 
+    @app.get("/")
+    async def root():
+        return {"message": "Hello World", "status": 200}
+
+
 # To run the API, use:
 # uvicorn filename:app --reload
